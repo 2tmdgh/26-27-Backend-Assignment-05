@@ -40,8 +40,4 @@ public class User {
         user.googleId = googleId;
         return user;
     }
-
-    public void linkGoolgeAccount(String googleId) {
-        this.googleId = googleId;
-    }
 }

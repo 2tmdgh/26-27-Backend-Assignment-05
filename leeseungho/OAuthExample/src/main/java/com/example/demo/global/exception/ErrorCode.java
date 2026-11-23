@@ -29,11 +29,14 @@ public enum ErrorCode {
     GOOGLE_LOGIN_FAILED("AUTH_007", HttpStatus.UNAUTHORIZED, "구글 로그인이 취소됐거나 구글 계정을 확인할 수 없습니다."),
     GOOGLE_LOGIN_NOT_CONFIGURED("AUTH_008", HttpStatus.SERVICE_UNAVAILABLE, "구글 로그인 서버 설정이 필요합니다."),
     GOOGLE_API_UNAVAILABLE("AUTH_009", HttpStatus.BAD_GATEWAY, "구글 로그인 서버에서 정상 응답을 받지 못했습니다."),
-    OAUTH_CODE_MISSING("AUTH_010", HttpStatus.BAD_REQUEST, "인가 코드가 누락되었습니다."),
 
     // Post
     POST_NOT_FOUND("POST_001", HttpStatus.NOT_FOUND, "게시글을 찾을 수 없습니다."),
-    POST_FORBIDDEN("POST_002", HttpStatus.FORBIDDEN, "본인이 작성한 게시글만 삭제할 수 있습니다.");
+    POST_FORBIDDEN("POST_002", HttpStatus.FORBIDDEN, "본인이 작성한 게시글만 삭제할 수 있습니다."),
+
+    // Movie
+    MOVIE_NOT_FOUND("MOVIE_001", HttpStatus.NOT_FOUND, "영화를 찾을 수 없습니다."),
+    MOVIE_FORBIDDEN("MOVIE_002", HttpStatus.FORBIDDEN, "본인이 등록한 영화만 삭제할 수 있습니다.");
 
     private final String code;
     private final HttpStatus status;
